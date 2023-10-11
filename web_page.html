@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="/favicon.png" />
+    <meta name="csrf-token" content="4E3MjvyEzyRpFa1Y4U6NbxPQSJYYeKOEmGv8rYPD">
+    <title>Đăng nhập</title>
+    <!-- Scripts -->
+    <script src="https://code.ptit.edu.vn/js/app.js" defer></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- Styles -->
+    <link href="https://code.ptit.edu.vn/css/app.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.ptit.edu.vn/2020/css/style.css?v=2.1.8">
+</head>
+<body>
+<!-- BACKGROUND IMAGE  -->
+<div class="bg-image--left">
+    <img src="https://code.ptit.edu.vn/2020/images/bg_left.png" alt="">
+</div>
+<div class="bg-image--right">
+    <img src="https://code.ptit.edu.vn/2020/images/bg_right.png" alt="">
+</div>
+
+<div class="container-fluid-login">
+    <div class="login">
+        <div class="login__main">
+
+            <div class="login__logo">
+                <img src="https://code.ptit.edu.vn/2020/images/logo_ptit.png" alt="Logo">
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="login__main__title">
+                        <p>Đăng nhập</p>
+                        <p><b>PTIT Code</b></p>
+                    </div>
+                </div>
+            </div>
+                        <div class="row">
+                <div class="col">
+                    <form action="https://code.ptit.edu.vn/login" class="login__main__form" method="post">
+                        <input type="hidden" name="_token" value="4E3MjvyEzyRpFa1Y4U6NbxPQSJYYeKOEmGv8rYPD">                        <label for="login__user">Tài khoản</label>
+                        <input type="text" name="username" id="login__user" value="" onchange="input_active('login__user')" autofocus>
+                        <label for="login__pw">Mật khẩu</label>
+                        <input type="password" name="password" id="login__pw" onchange="input_active('login__pw')">
+                        <div>
+                        <div class="checkbox__login">
+                            <input type="checkbox" value="1"  name="remember" id="login__checkbox">
+                            <label class="cb__label" for="login__checkbox">Ghi nhớ</label>
+                        </div>
+                                                        <a href="https://code.ptit.edu.vn/password/reset" class="login__main__forgetpass link--red">Quên mật khẩu?</a>
+                                                    </div>
+                                                <button type="submit"><span>Đăng nhập</span></button>
+
+
+
+                                                    <div class="separate">
+                                Hoặc đăng nhập với
+                            </div>
+                        <a href="https://code.ptit.edu.vn/auth/o365" class="button"><span>PTIT Microsoft Office 365</span></a>
+                                            </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lang">
+        <p>Select language</p>
+        <a href="https://code.ptit.edu.vn/change-language/vi">
+            <img src="https://code.ptit.edu.vn/2020/images/VN.png" alt="vi">
+        </a>
+        <a href="https://code.ptit.edu.vn/change-language/en">
+            <img src="https://code.ptit.edu.vn/2020/images/Eng.png" alt="en">
+        </a>
+    </div>
+</div>
+</body>
+<!-- JQUERY  -->
+<script src="https://code.ptit.edu.vn/2020/js/jquery-3.5.1.slim.min.js"></script>
+<script src="https://code.ptit.edu.vn/2020/js/popper.min.js"></script>
+<!-- BOOTSTRAP JS  -->
+<script>
+    function input_active(a){
+        let input = document.getElementById(a);
+        if(input.value !== ""){
+            $(`#${a}`).addClass('input--active');
+        }else{
+            $(`#${a}`).removeClass('input--active');
+        }
+    }
+</script>
+</html>
+
