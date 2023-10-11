@@ -66,13 +66,13 @@ def welcome(name):
 if __name__ == "__main__":
     with open("DSSV.csv", mode="r", encoding="utf-8-sig") as file:
         header = file.readline()
-        data = file.readlines()
+        data_msv = file.readlines()
 
 
     def nhap_msv():
         msv = input("Để có thể bắt đầu xin hãy nhập Mã sinh viên của bạn: ").upper()
         msv = f'"{msv}"'
-        for row in data:
+        for row in data_msv:
             row_list = row.split(",")
             check_msv = row_list[1]
             if msv == check_msv:
