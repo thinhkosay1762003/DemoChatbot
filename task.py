@@ -62,7 +62,7 @@ def dich_thuat(message):
         print("Xin lỗi, tôi không nhận ra được ngôn ngữ bạn nhập")
 
 def find_on_google(message):
-    ignore_word = ["tìm","kiếm","google","trên","cho","tôi","biết", "về"]
+    ignore_word = ["tìm","kiếm","google","trên","cho","tôi","biết", "về","bạn","có","thể","mở"]
     infor = message.lower().split(' ')
     search = ''
     for i in infor:
@@ -74,7 +74,7 @@ def find_on_google(message):
     wb.get().open(url)
     print(f'Đây là kết quả cho {search} của bạn trên Google')
 def find_on_youtube(message):
-    ignore_word = ["video","youtube","mở","cho","tôi","về","trên","tìm"]
+    ignore_word = ["video","youtube","mở","cho","tôi","về","trên","tìm","bạn","?","có","thể","tìm"]
     infor = message.lower().split(' ')
     search = ''
     for i in infor:
@@ -115,5 +115,42 @@ def search_wikihow(message):
             a=a+1
             print(f" {a}.{tutor_texts.text}")
 
+
+def find_code(message):
+    search_query = message
+    url = 'https://www.google.com/search?sitesearch=freetuts.net'
+
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82',
+    }
+    parameters = {'q': search_query}
+    content = requests.get(url, headers=headers, params=parameters).text
+    soup = BeautifulSoup(content, 'html.parser')
+    search = soup.find(id='search')
+    first_link = search.find('a')
+
+    if first_link:
+        first_link_url = first_link['href']
+        response = requests.get(first_link_url)
+        if response.status_code == 200:
+            soup = BeautifulSoup(response.text, 'html.parser')
+            code = soup.find_all('pre', class_='brush:cpp;')
+
+            if not code:
+                code = soup.find_all('pre', class_='brush:python;')
+
+            if not code:
+                code = soup.find_all('pre', class_='brush:java;')
+
+            if code:
+                result = code[-1].get_text()
+                print(f"Đây là hướng dẫn cho {message} của bạn:")
+                print(result)
+            else:
+                print("Xin lỗi tôi không có hướng dẫn cho đoạn code này.")
+        else:
+            print("Xin lỗi tôi không có hướng dẫn cho đoạn code này.")
+    else:
+        print("Xin lỗi tôi không có hướng dẫn cho đoạn code này.")
 
 

@@ -38,10 +38,20 @@
         "tra_loi": ["Văn phòng 1 cửa hoạt động buổi sáng từ 8h30 tới 11h30; Buổi chiều từ 14h00 tới 16h30 các ngày làm việc. Bộ phận kế toán hoạt động từ 9h tới 11h các ngày thứ 7 "]
 
       },
+      {"tag": "toa_nha_a1",
+      "mau_cau": ["Toà nhà A1 là gì", "toà a1 nằm ở đâu", "giới thiệu về toà nhà A1", "nhà hiệu bộ nằm đâu"],
+      "tra_loi": ["Tòa nhà A1 (hay còn gọi là Nhà hiệu bộ) - là nơi các bạn học Multi Media sẽ được thực hành các phòng chức năng ở tòa nhà này đó. Toà A1 nằm bên phải ngay từ cổng trường"]},
+      {"tag": "toa_nha_a3",
+      "mau_cau": ["Toà nhà A3 là gì", "toà a3 nằm ở đâu", "giới thiệu toà a3", "trung tâm thí nghiệm thực hành nằm đâu", "thực hành ở khu nào"],
+      "tra_loi": ["Toà nhà A3(trung tâm thí nghiệm thực hành) có các phòng học ở 3 tầng dưới và phòng thực hành cho các môn ngành kĩ thuật từ tầng 4 trở lên, đây cũng là nơi để các bạn thi những môn liên quan tới máy tính.\nToà nhà nằm phía sau khu A2 và ngay cạnh phòng thư viện."]},
       {"tag": "vanphong1cua",
         "mau_cau":["Văn phòng 1 cửa nằm ở đâu", "Tôi có thể tìm văn phòng một cửa ở đâu","Văn phòng một cửa là gì","Văn phòng một cửa có chức năng gì"],
         "tra_loi": ["Văn phòng một cửa giúp đỡ sinh viên và phụ huynh đến liên hệ, giải quyết các thủ tục hành chính. Văn phòng một cửa nằm ở phía bên phải từ cổng vào ở Cơ sở Hà Đông ."]
       },
+      {"tag": "toa_nha_a2",
+      "mau_cau": ["Toà nhà A2 là gì", "toà a2 nằm ở đâu", "giới thiệu về toà nhà A2", " hội trường a2"],
+      "tra_loi": ["Tòa nhà A2 (là toà nhà cao nhất gồm 10 tầng học và 1 tầng hầm G) là toà nhà chính,ngay đối diện từ cổng nhìn vào, phục vụ chức năng dạy học, khảo thí, bảo vệ, phòng nghỉ giáo viên.\nToà A2 cũng có một hội trường A2 phục vụ cho tập huấn, phổ biến thông tin cho sinh viên, tổ chức sự kiện"]},
+
       {"tag": "phan_loai_gpa",
         "mau_cau": ["phân loại gpa", "cách phân bố điểm", "gpa được tính như nào","gpa là gì"],
         "tra_loi": ["GPA là một hệ thống điểm dựa trên thành tích học tập của sinh viên dựa trên thang điểm từ 0 đến 4.\nGPA đượcc phân loại như sau:\n -1.0:Kém\n -1.0 - 2.0: Yếu\n -2.0 - 2.49:Trung bình\n -2.5 -3.19:Khá\n -3.2 - 3.59:Tốt\n -3.6 -4.0:Xuất sắc  "]
@@ -80,6 +90,11 @@
     "tag": "tutor",
     "mau_cau": ["Hướng dẫn tôi", "Chỉ tôi", "Dạy cho tôi", "Cách để","làm thế nào"],
     "tra_loi": []
+  },
+  {
+    "tag": "answer_code",
+    "mau_cau": ["Viết chương trình","Sử dụng c++", "Bằng java", "Hãy sử dụng python", "Tạo một đoạn lệnh", "Tạo chương trình"],
+    "tra_loi": []
   }
 ],
   "nhiem_vu": [
@@ -114,6 +129,10 @@
     {
       "tag": "tutor",
       "mission": "search_wikihow"
+    },
+    {
+      "tag": "answer_code",
+      "mission": "find_code"
     }
   ]
 }
